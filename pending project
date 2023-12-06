@@ -1,0 +1,18 @@
+SELECT COUNT(*)
+FROM fortune_companies;
+
+SELECT AVG(revenue), company_name, avg_employee_tenure
+FROM fortune_companies
+GROUP BY revenue, company_name, avg_employee_tenure
+ORDER BY revenue desc;
+
+SELECT *
+FROM fortune_companies
+WHERE revenue > 240
+AND industry = 'Technology'
+OR industry = 'Energy'
+OR industry = 'Finance'
+ORDER BY company_name;
+
+SELECT AVG(avg_employee_tenure)
+FROM fortune_companies
